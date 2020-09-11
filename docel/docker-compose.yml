@@ -1,0 +1,34 @@
+version: '2'
+services:
+  mysql:
+    image: mysql:8
+    hostname: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./mysql-data:/var/lib/mysql
+      - ./mysql-config:/etc/mysql/conf.d
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: lfs
+      MYSQL_USER: test
+      MYSQL_PASSWORD: test
+      USER: 1000
+
+  web:
+    image: matiasgb/php-nginx:php7.4
+    hostname: dev
+    links:
+      - mysql
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx:/etc/nginx/sites-available
+      - ./ssl:/etc/nginx/ssl
+      - ../:/var/www
+    environment:
+      TZ: "America/Argentina/Cordoba"
+      COMPOSER_CACHE_DIR: /var/www/.composer
+      COMPOSER_HOME: /var/www/.composer
