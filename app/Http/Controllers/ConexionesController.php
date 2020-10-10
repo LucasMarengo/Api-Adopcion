@@ -21,7 +21,7 @@ class ConexionesController extends Controller
                 'idAnimal' =>'required',
                 'tipo' => 'required',
                 'fechainicial' => 'required',
-                'fechafinal' => 'required';
+                'fechafinal' => 'required',
             ]);
 
             $idPersona = $request->input('idPersona');
@@ -40,8 +40,8 @@ class ConexionesController extends Controller
 
             //nombre de la vista
             return view('', [ 
-            'conex' => $conex)
+            'conex' => $conex,
              ]);
         }
    
-} -->
+} 
