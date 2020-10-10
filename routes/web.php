@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/carga', 'ConexionesController@crear ');
+Route::post('/carga', 'ConexionesController@mostrar');
+
