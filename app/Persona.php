@@ -48,6 +48,14 @@ class Persona extends Model
      }
      public function getEmail(): string
      {
+         return $this->email;
+     }
+     public function setDireccion(): string
+     {
+         $this->direccion=$direccion;
+     }
+     public function getDireccion(): string
+     {
          return $this->direccion;
      }
 

@@ -18,3 +18,6 @@ Route::get('/', function () {
 Route::get('/carga', 'ConexionesController@crear ');
 Route::post('/carga', 'ConexionesController@mostrar');
 
+Route::get('/personas', 'PersonaController@crear ');
+Route::post('/personas', 'PersonaController@mostrar');
+
