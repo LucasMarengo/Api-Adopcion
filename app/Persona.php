@@ -6,9 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Persona extends Model
 {
-     public function getId()
+     public function getIdpersona()
      {
-         return $this->id;
+         return $this->idPersona;
      }
      public function setNombre(string $nombre)
      {

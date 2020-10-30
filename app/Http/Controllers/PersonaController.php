@@ -23,12 +23,12 @@ class PersonaController extends Controllers
 
             $idPersona =  $request->input('idPersona');
             $nombre = $request->input('nombre');
-            $apellido = $request->input('aoellido');
+            $apellido = $request->input('apellido');
             $dni = $request->input('dni');
             $telefono = $request->input('telefono');
             $email = $request->input('email');
             $direccion = $request->input('direccion');
-
+            
             $persona = new Persona;
             $persona->setNombre($nombre);
             $persona->setApellido($apellido);
@@ -38,6 +38,7 @@ class PersonaController extends Controllers
             $persona->setDireccion($direccion);
             $persona->save();
 
+            
             
             if($persona->save()){
                 return response()->json([

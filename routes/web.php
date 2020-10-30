@@ -21,3 +21,6 @@ Route::post('/carga', 'ConexionesController@mostrar');
 Route::get('/personas', 'PersonaController@crear ');
 Route::post('/personas', 'PersonaController@mostrar');
 
+Route::get('/edicion', 'EdicionpersonaController@editar ');
+Route::post('/edicion', 'EdicionpersonaController@mostrar');
+
