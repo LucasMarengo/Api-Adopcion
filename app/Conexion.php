@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -35,26 +35,26 @@ class Conexion extends Model
         $this->fecha_final = $fecha_final;
     }
 
-    public function getIdPersona(): integer
+    public function getIdPersona(): int
     {
-        $this->id_persona;
+       return $this->id_persona;
     }
-    public function getIdAnimal(): integer
+    public function getIdAnimal(): int
     {
-        $this->id_animal;
+       return $this->id_animal;
     }
     public function getTipo(): string
     {
-        $this->tipo;
+        return $this->tipo;
     }
     public function getFechaInicial(): string
     {
-        $this->fecha_inicial;
+        return $this->fecha_inicial;
     }
 
     public function getFechaFinal(): string
     {
-        $this->fecha_final;
+        return $this->fecha_final;
     }
 
     // Relaciones
