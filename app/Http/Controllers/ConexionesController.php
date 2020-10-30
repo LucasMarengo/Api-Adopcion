@@ -6,14 +6,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Conexion;
 
+
 class ConexionesController extends Controller
 {
-    
-        public function crear()
-        {
-            //nombre de la vista
-            return view ('');
-        }
 
         public function mostrar(Request $request)
         {
@@ -39,10 +34,17 @@ class ConexionesController extends Controller
             $conex->setFechaFinal($fechafinal);
             $conex->save();
 
-            //nombre de la vista
-            return view('', [ 
-            'conex' => $conex,
-             ]);
+            if($conex->save()){
+                return response()->json([
+                    'status' => true,
+                    'message' => 'Se cargo la persona con exito',
+                ]);
+            }else{
+                return response()->json([
+                    'status' => false,
+                    'message' => 'Ocurrio un error en la carga de la persona',
+                ]);
+            }
         }
    
 } 
