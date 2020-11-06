@@ -46,5 +46,5 @@ class ConexionesController extends Controller
                 ]);
             }
         }
-   
-} 
+
+}

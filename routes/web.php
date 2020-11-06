@@ -15,12 +15,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/carga', 'ConexionesController@crear ');
-Route::post('/carga', 'ConexionesController@mostrar');
+Route::get('/mostrar', 'ConexionesController@mostrar ');
+Route::post('/mostrar', 'ConexionesController@mostrar');
 
 Route::get('/personas', 'PersonaController@crear ');
 Route::post('/personas', 'PersonaController@mostrar');
 
 Route::get('/edicion', 'EdicionpersonaController@editar ');
 Route::post('/edicion', 'EdicionpersonaController@mostrar');
+
 
