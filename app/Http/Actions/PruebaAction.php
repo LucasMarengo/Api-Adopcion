@@ -5,11 +5,12 @@ namespace App\Http\Actions;
 
 final class PruebaAction
 {
-    public function prueba()
-    {
-        return response()->json(
+    public function __invoke()
+    { 
+        //$users = User::all;
+        return response()->json([
             ['name' => 'Lucas'],
             ['name' => 'Pedro'],
-        );
+        ]);
     }
 }

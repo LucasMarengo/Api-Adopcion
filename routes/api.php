@@ -17,4 +17,4 @@ Route::get('/user', 'ShowUserListAction@run');
 
 
 
-Route::get('/Api-Adopcion/prueba', \App\Http\Actions\PruebaAction::class);
+Route::get('/prueba', \App\Http\Actions\PruebaAction::class);
