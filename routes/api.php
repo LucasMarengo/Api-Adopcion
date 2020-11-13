@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,8 +14,11 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/user', 'ShowUserListAction@run');
+//Route::get('/user', 'ShowUserListAction@run');
+
+Route::post('/animales/add', \App\Http\Actions\AnimalAddAction::class);
+Route::get('/animales/list', \App\Http\Actions\AnimalListAction::class);
+Route::put('/animales/edit/{id_animal}', \App\Http\Actions\AnimalEditAction::class);
+Route::delete('/animales/delete/{id_animal}', \App\Http\Actions\AnimalDeleteAction::class);
 
 
-
-Route::get('/prueba', \App\Http\Actions\PruebaAction::class);

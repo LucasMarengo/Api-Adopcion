@@ -26,19 +26,19 @@ class Persona extends Model
      {
          return $this->apellido;
      }
-     public function setDni(bigInteger $dni)
+     public function setDni(int $dni)
      {
         $this->dni=$dni;
      }
-     public function getDni(): bigInteger
+     public function getDni(): int
      {
          return $this->dni;
      }
-     public function setTelefono(integer $telefono)
+     public function setTelefono(int $telefono)
      {
         $this->telefono=$telefono;
      }
-     public function getTelefono(): integer
+     public function getTelefono(): int
      {
          return $this->telefono;
      }
@@ -50,8 +50,8 @@ class Persona extends Model
      {
          return $this->email;
      }
-     public function setDireccion(): string
-     {
+     public function setDireccion(string $direccion)
+    {
          $this->direccion=$direccion;
      }
      public function getDireccion(): string

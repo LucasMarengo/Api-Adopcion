@@ -7,8 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 class Animal extends Model
 {
 
+    protected $primaryKey = 'id_animal';
     //funciones Set
 
+    public function setId_animal(int $id_animal)
+    {
+        $this->id_animal = $id_animal;
+    }
     public function setNombre(string $nombre)
     {
         $this->nombre = $nombre;
@@ -25,7 +30,7 @@ class Animal extends Model
     {
         $this->raza = $raza;
     }
-    public function setPeleje(string $pelaje)
+    public function setPelaje(string $pelaje)
     {
         $this->pelaje = $pelaje;
     }
@@ -40,6 +45,11 @@ class Animal extends Model
 
     // funciones Get
 
+
+    public function getId_animal(): int
+    {
+        return $this->id_animal;
+    }
     public function getNombre(): string
     {
         return $this->nombre;
