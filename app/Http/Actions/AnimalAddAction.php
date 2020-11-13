@@ -5,10 +5,9 @@ declare(strict_types=1);
 namespace App\Http\Actions;
 
 use App\Animal;
-use App\Http\Controllers\AnimalesController;
 use Illuminate\Http\Request;
 
-final class AnimalAddAction extends AnimalesController
+final class AnimalAddAction
 {
     public function __invoke(Request $request)
     {
