@@ -6,7 +6,7 @@ namespace App\Http\Actions;
 
 use App\Animal;
 
-final class AnimalDeleteAction
+final class AnimalListByTypeAction
 {
     public function __invoke($id_animal)
     {
