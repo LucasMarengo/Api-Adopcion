@@ -20,5 +20,8 @@ Route::post('/animales/add', \App\Http\Actions\AnimalAddAction::class);
 Route::get('/animales/list', \App\Http\Actions\AnimalListAction::class);
 Route::put('/animales/edit/{id_animal}', \App\Http\Actions\AnimalEditAction::class);
 Route::delete('/animales/delete/{id_animal}', \App\Http\Actions\AnimalDeleteAction::class);
+Route::get('/animales/list/{tipo}', \App\Http\Actions\AnimalListByTypeAction::class);
+
+
 
 
