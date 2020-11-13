@@ -23,5 +23,10 @@ Route::delete('/animales/delete/{id_animal}', \App\Http\Actions\AnimalDeleteActi
 Route::get('/animales/list/{tipo}', \App\Http\Actions\AnimalListByTypeAction::class);
 
 
+Route::post('/personas/add', \App\Http\Actions\PersonaAddAction::class);
+Route::get('/personas/list', \App\Http\Actions\PersonaListAction::class);
+Route::put('/personas/edit/{id_persona}', \App\Http\Actions\PersonaEditAction::class);
+Route::delete('/personas/delete/{id_persona}', \App\Http\Actions\PersonaDeleteAction::class);
+
 
 
