@@ -8,20 +8,14 @@ use App\Animal;
 
 final class AnimalListByTypeAction
 {
-    public function __invoke($id_animal)
+    public function __invoke($tipo)
     {
+        $animales = Animal::select('animals.nombre as nombreAnimal', 'personas.nombre as nombrePersona', 'conexiones.tipo as tipoConexion' )
+            ->join('conexiones', 'animals.id_animal', '=', 'conexiones.id_animal')
+            ->join('personas', 'conexiones.id_persona', '=', 'personas.id_persona')
+            ->where('conexiones.tipo', '=', $tipo)
+            ->get();
 
-        // $animal = Animal::join('posts', 'posts.user_id', '=', 'users.id'),
-        // ->where('users.tipo' = 1),
-        // ->get();
-
-
-        $animal = Animal::find($id_animal);
-        if($animal->delete()){
-            return response()->json([
-                'status' => 'Ok',
-                'message' => 'Animal Eliminado Exitosamente',
-            ]);
-        }
+        return response()->json([$animales]);
     }
 }
