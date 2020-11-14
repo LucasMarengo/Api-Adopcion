@@ -61,6 +61,16 @@ class Persona extends Model
      {
          return $this->direccion;
      }
+     public function setApto(int $apto)
+     {
+        $this->apto=$apto;
+     }
+     public function getAptop(): int
+     {
+         return $this->apto;
+     }
+
+     
 
      //RELACIONES
      public function conexiones()
