@@ -28,5 +28,5 @@ Route::get('/personas/list', \App\Http\Actions\PersonaListAction::class);
 Route::put('/personas/edit/{id_persona}', \App\Http\Actions\PersonaEditAction::class);
 Route::delete('/personas/delete/{id_persona}', \App\Http\Actions\PersonaDeleteAction::class);
 
-
+Route::post('/conexiones/add', \App\Http\Actions\ConexionAddAction::class);
 
