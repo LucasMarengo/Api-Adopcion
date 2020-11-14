@@ -19,7 +19,8 @@ class PersonaController extends Controller
             'dni' => 'required|numeric|max:80',
             'telefono' => 'required|numeric|min:0',
             'email' => 'required|min:0',
-            'direccion' => 'required|min:0']);
+            'direccion' => 'required|min:0',
+            'apto' => 'required|max:1']);
 
             $idPersona =  $request->input('idPersona');
             $nombre = $request->input('nombre');

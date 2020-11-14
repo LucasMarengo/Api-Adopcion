@@ -23,6 +23,7 @@ final class PersonaEditAction
          $telefono = $request->input('telefono');
          $email = $request->input('email');
          $direccion = $request->input('direccion');
+         $apto = $request->input('apto');
         
          $persona->setNombre($nombre);
          $persona->setApellido($apellido);
@@ -30,6 +31,7 @@ final class PersonaEditAction
          $persona->setTelefono($telefono);
          $persona->setEmail($email);
          $persona->setDireccion($direccion);
+         $persona->setApto($apto);
 
         if($persona->save()){
             return response()->json([

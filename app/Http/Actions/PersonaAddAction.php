@@ -18,6 +18,7 @@ final class PersonaAddAction extends PersonaController
         $telefono = $request->input('telefono');
         $email = $request->input('email');
         $direccion = $request->input('direccion');
+        $apto= $request->input('apto');
         
         $persona = new Persona();
         $persona->setNombre($nombre);
@@ -26,6 +27,7 @@ final class PersonaAddAction extends PersonaController
         $persona->setTelefono($telefono);
         $persona->setEmail($email);
         $persona->setDireccion($direccion);
+        $persona->setApto($apto);
 
         if ($persona->save()) {
             return response()->json([
