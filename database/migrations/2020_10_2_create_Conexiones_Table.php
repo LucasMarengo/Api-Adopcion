@@ -13,7 +13,7 @@ class createConexionesTable extends Migration
      */
     public function up()
     {
-        Schema::create('conexiones', function (Blueprint $table) {
+        Schema::create('conexions', function (Blueprint $table) {
             $table->id();
             $table->integer('id_persona');
             $table->integer('id_animal');
@@ -21,7 +21,7 @@ class createConexionesTable extends Migration
             $table->timestamp('fecha_inicial');
             $table->timestamp('fecha_final');
             $table->timestamps();
-            
+
         });
     }
 
@@ -32,7 +32,7 @@ class createConexionesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('conexiones');
+        Schema::dropIfExists('conexions');
     }
 
 
