@@ -8,13 +8,13 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreatePersonasTable extends Migration
 {
-    
+
         /**
          * Run the migrations.
          *
          * @return void
          */
-    
+
     public function up()
     {
 
@@ -25,11 +25,11 @@ class CreatePersonasTable extends Migration
             $table->string('apellido',50);
             $table->bigInteger('dni',8);
             $table->integer('telefono');
-            $table->string('email'); 
+            $table->string('email');
             $table->string('direccion',20);
-            $table->timestamp();
+            $table->timestamps();
         });
-        
+
     }
     public function down()
     {
